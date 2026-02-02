@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studieplanerare</title>
+</head>
+<body>
+
+<nav class="navigering">
+    <ul class="menu">
+        <li><a href="#">Start</a></li>
+        <li><a href="#studietips">Studietips</a></li>
+        <li><a href="#planera">Kalender</a></li>
+        <li><a href="#plugga">Plugga</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Välkommen!</h1>
+    <h2>Denna sidan hjälper dig att planera dina studier</h2>
+</header>
+
+<main>
+    <section id="studietips" class="tips-a">
+        <div class="tips-b">
+            <h2>🔥 Studietips - Motivation</h2>
+            <p>Att hålla motivationen uppe är nyckeln till framgång.</p>
+            <ul class="tips-c">
+                <li><strong>Hitta ditt "varför":</strong> Påminn dig själv om varför du studerar.</li>
+                <li><strong>Belöna dig själv:</strong> Unna dig något gott efter en timmes plugg.</li>
+                <li><strong>Variation:</strong> Byt miljö ibland. Gå till ett bibliotek eller café.</li>
+            </ul>
+        </div>
+
+        <div class="tips-b">
+            <h2>📅 Studietips - Planering</h2>
+            <p>Struktur minskar stress.</p>
+            <ul class="tips-c">
+                <li><strong>Pomodoro-tekniken:</strong> Plugga 25 min, vila 5 min.</li>
+                <li><strong>Prioritera:</strong> Gör det svåraste först.</li>
+                <li><strong>Checklistor:</strong> Det är skönt att bocka av saker!</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="planera" class="tips-b">
+        <h2>📝 Planera läxor</h2>
+        <p>Lägg till dina läxor här. Klicka på en läxa för att ta bort den när du är klar!</p>
+        <div class="input-grupp">
+            <input type="text" id="laxaInput" placeholder="Vad ska du göra?">
+            <input type="text" id="dagInput" placeholder="Vilken dag?">
+            <button id="laggTillBtn">Lägg till</button>
+        </div>
+        <ul id="laxaLista">
+            </ul>
+    </section>
+
+    <section id="plugga" class="tips-b">
+        <h2>🎧 Plugga nu</h2>
+        <p>"Börja där du är, använd det du har, gör vad du kan."</p>
+        <br>
+        <div class="video-container">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZeKCadgRdKQ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </section>
+</main>
+
+<footer id="kontakt">
+    <p>© 2026 Studieplanerare av Laian.</p>
+    <p>Kontakt: reesoobin@gmail.com</p>
+</footer>
+
+</body>
+</html>

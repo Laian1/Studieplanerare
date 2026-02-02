@@ -1,0 +1,203 @@
+/* Grundinställningar för hela sidan */
+html {
+    scroll-behavior: smooth; /* Mjuk scroll när man klickar i menyn */
+}
+
+body {
+    font-family: 'Questrial', sans-serif; 
+    margin: 0;
+    text-align: center;
+    background-color: #f4f4f4; /* En mjuk ljusgrå bakgrund så de vita korten syns */
+    color: #333;
+}
+
+/* Menyn */
+.navigering {
+    background-color: white; 
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    position: sticky; /* Gör att menyn fastnar i toppen */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.menu {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu a {
+    display: block;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 20px; /* Lite mindre än 32px för bättre balans */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Rubriker */
+header {
+    margin: 60px 20px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Korten (Designen för sektionerna) */
+.tips-b {
+    background: white;
+    max-width: 700px;     /* Inte för bred text */
+    margin: 30px auto;    /* Centrera boxen */
+    padding: 40px;
+    border-radius: 15px;  /* Rundade hörn */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Snygg skugga */
+    text-align: left;     /* Texten ser oftast bättre ut vänsterställd i boxar */
+}
+
+/* Listor i tipsen */
+.tips-c {
+    line-height: 1.6;
+    padding-left: 20px;
+}
+
+.tips-c li {
+    margin-bottom: 10px;
+}
+
+/* Input fält och knapp */
+.input-grupp {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Gör att det funkar bra på mobil också */
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+#laggTillBtn {
+    padding: 12px 25px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#laggTillBtn:hover {
+    background-color: #4ca1af; /* En fin accentfärg vid hover */
+}
+
+/* Läxlistan styling */
+#laxaLista {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#laxaLista li {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; /* Visar att man kan klicka */
+    transition: transform 0.2s;
+}
+
+#laxaLista li:hover {
+    transform: scale(1.02); /* Växer lite när man pekar på den */
+    background: #ffecec;    /* Ljusröd för att visa att man kan ta bort */
+}
+
+footer {
+    padding: 40px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Mobilanpassning */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 40px; /* Gör rubriken lite mindre så den får plats */
+        margin-top: 30px;
+    }
+
+    .menu {
+        flex-direction: column; /* Lägger menyvalen på höjd istället för bredd */
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 24px; /* Lite mindre text i mobilen */
+        padding: 5px;
+    }
+
+    .navigering {
+        padding: 20px;
+    }
+
+    .tips-b {
+        margin: 10px; /* Mindre marginaler på sidorna */
+        padding: 20px;
+        width: auto; /* Låter boxen ta upp hela bredden */
+    }
+
+    .input-grupp {
+        flex-direction: column; /* Lägger input-fälten under varandra */
+    }
+
+    input, #laggTillBtn {
+        width: 100%; /* Gör att de tar upp hela bredden i mobilen */
+        box-sizing: border-box; /* Ser till att padding inte gör dem för breda */
+    }
+}
+
+/* Denna kod finns nog redan, men se till att transition ligger med */
+.tips-b {
+    background: white;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    
+    /* Detta gör att förstoringen sker mjukt (0.3 sekunder) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Här händer magin när man hovrar! */
+.tips-b:hover {
+    transform: scale(1.03); /* Gör boxen 3% större */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Gör skuggan lite djupare för att förstärka lyftet */
+    background-color: #ffffff; /* Håller bakgrunden vit */
+}
