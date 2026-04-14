@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" >
+    <title>Om oss - Studieplanerare</title>
+    <link rel="stylesheet" href="css/style.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" >
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="videos/beigevideo.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <div class="logo">Studieplanerare</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="planera.html">Planera</a></li>
+                <li><a href="fokus.html">Fokusläge</a></li>
+                <li><a href="tips.html">Studietips</a></li>
+                <li><a href="javascript:void(0)" class="menu-icon" onclick="openNav()">☰</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="side-menu" class="side-nav-overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="side-menu-content">
+            <a href="kontakt.html">Om oss</a>
+        </div>
+    </div>
+
+    <main class="contact-main">
+        <div class="hero-text">
+            <h1>Om oss</h1>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-card">
+                <div class="contact-image-wrapper">
+                    <img src="images/laian.png" alt="Om mig" class="contact-img">
+                </div>
+                <div class="contact-info">
+                    <h2>Hej!</h2>
+                    <p>Jag är en elev som har skapat den här studieplaneraren för att hjälpa andra att få bättre struktur på sitt plugg. Jag vet hur stressigt det kan vara i skolan, så jag ville bygga något enkelt och snyggt som gör det lite lättare att fokusera.</p>
+                    
+                    <div class="email-section">
+                        <h3>Kontakt</h3>
+                        <p>Har du frågor eller förslag? Hör gärna av dig!</p>
+                        <a href="mailto:laian.amaere@gmail.com" class="email-link">laian.amaere@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

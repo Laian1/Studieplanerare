@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" >
+    <title>Planera - Studieplanerare</title>
+    <link rel="stylesheet" href="css/style.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" >
+</head>
+<body>
+        <video autoplay muted loop id="bg-video">
+            <source src="videos/beigevideo.mp4" type="video/mp4">
+            Din webbläsare stöder inte videotaggen.
+        </video>
+    <header>
+      
+        <div class="logo">Studieplanerare</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="planera.html">Planera</a></li>
+                <li><a href="fokus.html">Fokusläge</a></li>
+                <li><a href="tips.html">Studietips</a></li>
+                <li><a href="javascript:void(0)" class="menu-icon" onclick="openNav()">☰</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="side-menu" class="side-nav-overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="side-menu-content">
+            <a href="kontakt.html">Om oss</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="hero-text">
+            <h1>Planera dina läxor</h1>
+            <p>Fyll i formuläret för att hålla koll på studierna.</p>
+        </div>
+
+        <section class="planner-form">
+            <div class="dropdown-row">
+                <select id="subject">
+                    <option value="">Ämne</option>
+                    <option value="Matte">Matte</option>
+                    <option value="Svenska">Svenska</option>
+                    <option value="Engelska">Engelska</option>
+                    <option value="Fysik">Fysik</option>
+                    <option value="Programmering">Programmering</option>
+                    <option value="Kemi">Kemi</option>
+                    <option value="Biologi">Biologi</option>
+                    <option value="Historia">Historia</option>
+                    <option value="Geografi">Geografi</option>
+                    <option value="Samhällskunskap">Samhällskunskap</option>
+                    <option value="Religion">Religion</option>
+                    <option value="Teknik">Teknik</option>
+                    <option value="Annat">Annat</option>
+                </select>
+
+                <select id="day">
+                    <option value="">Dag</option>
+                    <option value="Måndag">Måndag</option>
+                    <option value="Tisdag">Tisdag</option>
+                    <option value="Onsdag">Onsdag</option>
+                    <option value="Torsdag">Torsdag</option>
+                    <option value="Fredag">Fredag</option>
+                    <option value="Lördag">Lördag</option>
+                    <option value="Söndag">Söndag</option>
+                </select>
+
+                <select id="priority">
+                    <option value="">Prioritet</option>
+                    <option value="1">1 (Högst)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="input-row">             <!-- Här skriver man själva läxan och lägger till den -->
+
+                <input type="text" id="homework-text" placeholder="Skriv din läxa...">                 <!-- Textfält där man skriver vad man ska göra -->
+
+                <button id="add-btn" class="add-btn">Lägg till</button>                 <!-- Knapp som lägger till läxan i listan -->
+
+            </div>
+        </section>
+
+        <section class="homework-section">         <!-- Här visas alla läxor man har lagt till -->
+
+            <h2>Mina Läxor:</h2>
+            <ul id="homework-list">             <!-- Listan där jvs lägger in uppgifterna -->
+
+                </ul>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,558 @@
+/* Färgvariabler för Soft Sand-temat */
+:root {
+    --color-bg: #EDEDE9;      /* Ljusaste sand */
+    --color-header: #D6CCC2;  /* Grå-beige */
+    --color-card: #F5EBE0;    /* Varm kräm */
+    --color-border: #D5BDAF;  /* Mörkare sand för ramar */
+    --color-accent: #E3D5CA;  /* Mjuk beige för hover-effekter */
+    --color-text: #4A443F;    /* Mörkbrun text för bättre läsbarhet än svart */
+}
+
+/* Grundinställningar */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px; /* Ökat från 15px till 30px för mer höjd */
+    background-color: var(--color-header);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Lite kraftigare skugga */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.8rem; /* Större logga */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 12px 25px; /* Mer luft inuti knapparna */
+    background-color: var(--color-card);
+    border: 2px solid var(--color-border); /* Tjockare ram */
+    border-radius: 30px; 
+    font-size: 1.1rem; /* Större text */
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--color-accent);
+}
+/* --- Huvudinnehåll --- */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.hero-text {
+    text-align: center;
+    margin-bottom: 70px; /* Här flyttar vi ner boxarna */
+}
+
+.hero-text h1 {
+    font-size: 3.4rem; /* Här gör vi texten lite större */
+    margin: 0;
+    color: var(--color-text);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* --- Knapp-listan --- */
+.button-list {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 1100px;
+    flex-wrap: wrap;
+}
+/* Rektangulär form: Bred men inte hög */
+.card {
+    display: flex;
+    flex-direction: row; /* Text till vänster, ikon till höger */
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-card);
+    padding: 10px 20px;    /* Lite padding uppe/nere, mer på sidorna */
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--color-text);
+    width: 260px;          /* Bredden på rektangeln */
+    height: 70px;           /* Låg höjd för att få rektangelformen */
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    background-color: var(--color-accent);
+}
+
+.card span {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 0;             /* Tar bort extra mellanrum */
+}
+
+.card img {
+    width: 35px;           /* Mindre ikon för att passa i den låga boxen */
+    height: auto;
+}
+
+.hero-text h1 {
+    font-size: 3.4rem; /* Höjt från 3rem för att få den där extra tyngden */
+    margin: 0;
+    color: var(--color-text);
+}
+
+.hero-text {
+    text-align: center;
+    margin-bottom: 70px; /* Höjt från 50px för att trycka ner boxarna lite */
+}
+
+/* Själva meny-panelen */
+.side-nav-overlay {
+    height: 100%;
+    width: 0; /* Börjar som osynlig */
+    position: fixed;
+    z-index: 2000; /* Ligger över allt annat */
+    top: 0;
+    right: 0;
+    background-color: var(--color-header); /* Samma som din header */
+    overflow-x: hidden;
+    transition: 0.5s; /* Hastigheten på animationen */
+    padding-top: 60px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+/* Länkarna inuti sidmenyn */
+.side-menu-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+
+.side-menu-content a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--color-text);
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Stäng-knappen (X) */
+.side-nav-overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 36px;
+    margin-left: 50px;
+    text-decoration: none;
+    color: var(--color-text);
+}
+/* Gör formuläret mer modernt */
+.planner-form {
+    background-color: var(--color-card);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--color-border);
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.dropdown-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Bra för mobil */
+}
+
+.dropdown-row select, .input-row input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-row input {
+    flex: 1;
+}
+
+.add-btn {
+    background-color: var(--color-header);
+    color: var(--color-text);
+    padding: 10px 25px;
+    border: 2px solid var(--color-border);
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background-color: var(--color-accent);
+}
+
+/* --- Bakgrundsvideo --- */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ser till att videon täcker hela ytan */
+    z-index: -1; /* Lägger den bakom text och knappar */
+    opacity: 0.8; /* Justera denna (0.1 till 1.0) för att styra hur mycket videon syns */
+}
+
+/* --- Justering för att designen ska poppa mot videon --- */
+header {
+    background-color: rgba(214, 204, 194, 0.9); /* Gör headern lite genomskinlig */
+    backdrop-filter: blur(5px); /* Ger en snygg suddig effekt bakom headern */
+}
+
+.card {
+    background-color: rgba(245, 235, 224, 0.9); /* Gör även boxarna lite genomskinliga */
+    backdrop-filter: blur(3px);
+}
+/* Gör det tydligt vilken knapp som är markerad */
+a:focus, button:focus, select:focus {
+    outline: 3px solid #4A443F; /* En tydlig mörk ram när man tabbar */
+    outline-offset: 2px;
+}
+/* Styling för själva knappen */
+.contrast-btn {
+    background-color: var(--color-text);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+:root {
+    /* ... andra färger ... */
+    --color-text: #2D2926; /* En djupare mörkbrun som ger bättre kontrast */
+}
+/* --- Fokusläge Sida --- */
+.focus-main {
+    align-items: center;
+}
+
+.focus-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.spotify-container {
+    width: 100%;
+    max-width: 700px; /* Begränsa bredden något */
+    border-radius: 20px;
+    overflow: hidden; /* För att passa Spotify-spelarens rundade hörn */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.timer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.timer-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--color-card);
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid var(--color-border);
+    width: 100%;
+    max-width: 400px;
+}
+
+.timer-settings label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.timer-settings input[type="radio"] {
+    accent-color: var(--color-accent); /* Byt färg på radioknappen */
+    transform: scale(1.3);
+}
+
+.timer-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.timer-box {
+    background-color: var(--color-card);
+    padding: 30px 60px;
+    border-radius: 20px;
+    border: 3px solid var(--color-border);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+#timer-time {
+    font-size: 5rem; /* Stor, tydlig timer */
+    font-weight: bold;
+    color: var(--color-text);
+    font-family: 'Courier New', Courier, monospace; /* Ger en timer-känsla */
+}
+
+
+/* --- Spotify Container (Från din gamla kod) --- */
+.video-container {
+    width: 100%;
+    max-width: 700px; /* Samma bredd som dina tips-boxar */
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid var(--color-border);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Justera focus-content så allt ligger i en snygg kolumn */
+.focus-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.timer-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+/* --- Studietips Sida --- */
+.tips-main {
+    align-items: center;
+}
+
+.tips-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.tips-category {
+    text-align: left; /* Centrera rubriken på kategorin */
+}
+
+.tips-category h2 {
+    color: var(--color-text);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--color-border); /* En tydlig linje */
+    padding-bottom: 10px;
+    text-align: left; /* Centrera rubriken */
+}
+
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Mellanrum mellan korten */
+}
+
+.tips-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-card);
+    padding: 25px 35px;
+    border-radius: 20px;
+    border: 3px solid var(--color-border);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.tips-card:hover {
+    transform: translateY(-5px); /* Lite lyft vid hovring */
+}
+
+.tips-text {
+    flex: 1; /* Låt texten ta upp mest plats */
+    padding-right: 30px;
+}
+
+.tips-text h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+.tips-text p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-text);
+}
+
+.tips-icon {
+    width: 70px; /* Sätt storlek på bilderna */
+    height: auto;
+}
+/* --- Om oss / Kontakt --- */
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+.contact-card {
+    background-color: var(--color-card);
+    border: 3px solid var(--color-border);
+    border-radius: 30px;
+    overflow: hidden; /* Så att bilden följer hörnen */
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.contact-image-wrapper {
+    flex: 1;
+    min-height: 300px;
+    /* Lägg till dessa tre rader för att centrera bilden */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-img {
+    width: 80%; /* Behåll din storlek */
+    height: 80%; /* Behåll din storlek */
+    object-fit: contain; /* Ändra till contain om du vill se hela illustrationen utan att den klipps */
+    border-radius: 50%; /* Valfritt: gör bilden rund om det passar din illustration bättre */
+}
+
+.contact-info {
+    flex: 1.5;
+    padding: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: var(--color-text);
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.email-section h3 {
+    margin-bottom: 5px;
+    color: var(--color-text);
+}
+
+.email-link {
+    color: var(--color-text);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--color-border);
+    transition: 0.3s;
+}
+
+.email-link:hover {
+    color: #8a7b6a; /* Lite mörkare beige vid hovring */
+}
+
+.map-search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.map-search-container input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid var(--color-border);
+    width: 60%;
+    font-family: inherit;
+}
+
+.map-wrapper {
+    background-color: var(--color-card);
+    padding: 10px;
+    border-radius: 25px;
+    border: 3px solid var(--color-border);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.cafe-section {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}

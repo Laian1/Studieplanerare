@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" >
+    <title>Fokusläge - Studieplanerare</title>
+    <link rel="stylesheet" href="css/style.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" >
+</head>
+<body>
+     <video autoplay muted loop id="bg-video">
+        <source src="videos/beigevideo.mp4" type="video/mp4">
+        Din webbläsare stöder inte videotaggen.
+    </video>
+    <header>
+        
+        <div class="logo">Studieplanerare</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="planera.html">Planera</a></li>
+                <li><a href="fokus.html">Fokusläge</a></li>
+                <li><a href="tips.html">Studietips</a></li>
+                <li><a href="javascript:void(0)" class="menu-icon" onclick="openNav()">☰</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="side-menu" class="side-nav-overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="side-menu-content">
+            <a href="kontakt.html">Om oss</a>
+        </div>
+    </div>
+
+    <main class="focus-main">
+
+        <div class="hero-text">
+            <h1>Fokusläge</h1>
+            <p>Koncentrera dig på dina studier med timer och musik.</p>
+        </div>
+
+        <div class="focus-content">
+
+            <!-- Hela delen med timer ochhhhhhhhhhhh inställningar -->
+            <div class="timer-wrapper">
+
+                <!-- Här väljer man hur lång fokus/paus man vill ha -->
+                <section class="timer-settings">
+
+                    <label>
+                        <input type="radio" name="focus-duration" value="25" checked>
+                        <span>25 min Plugg / 5 min Paus</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="focus-duration" value="50">
+                        <span>50 min Plugg / 10 min Paus</span>
+                    </label>
+
+                </section>
+
+                <!-- Själva timern + startknapp -->
+                <section class="timer-display">
+
+                    <!-- Visar tiden som räknas ner -->
+                    <div class="timer-box">
+                        <span id="timer-time">25:00</span>
+                    </div>
+
+                    <!-- Knappen som startar/stoppar timern -->
+                    <button id="timer-control" class="add-btn">STARTA</button>
+
+                </section>
+            </div>
+
+            <!-- Spotify -->
+            <section id="plugga" class="video-container">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZeKCadgRdKQ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

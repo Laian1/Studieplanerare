@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Studieplanerare</title>
+    <link rel="stylesheet" href="css/style.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" >
+</head>
+<body>
 
+    <video autoplay muted loop id="bg-video">
+        <source src="videos/beigevideo.mp4" type="video/mp4">
+        Din webbläsare stöder inte videotaggen.
+    </video>
+
+    <header>
+        <div class="logo">Studieplanerare</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="planera.html">Planera</a></li>
+                <li><a href="fokus.html">Fokusläge</a></li>
+                <li><a href="tips.html">Studietips</a></li>
+                
+     <li><a href="javascript:void(0)" class="menu-icon" onclick="openNav()">☰</a></li>  <!-- meny /// som öppnar sidomenyn -->
+
+            </ul>
+        </nav>
+    </header>
+
+    <div id="side-menu" class="side-nav-overlay">     <!-- sidomeny som typ kommer fram från sidan när man klickar på tre strck menyn -->
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>         <!-- Stäng-knapp för sidomenyn -->
+
+        <div class="side-menu-content">         <!-- innehåll i sidomenyn -->
+
+            <a href="kontakt.html">Om oss</a>
+        </div>
+    </div>
+    <main>
+        <div class="hero-text">
+            <h1>Välkommen!</h1>
+            <p>Redo att börja plugga?</p>
+        </div>
+
+        <div class="button-list">
+            <a href="planera.html" class="card">
+                <span>Planera läxor</span>
+                <img src="images/bokk.png" alt="Planera">
+            </a>
+            <a href="fokus.html" class="card">
+                <span>Fokusläge</span>
+                <img src="images/k.png" alt="Fokus">
+            </a>
+            <a href="tips.html" class="card">
+                <span>Studietips</span>
+                <img src="images/lamp.png" alt="Tips">
+            </a>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

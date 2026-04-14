@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" >
+    <title>Studietips - Studieplanerare</title>
+    <link rel="stylesheet" href="css/style.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" >
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="videos/beigevideo.mp4" type="video/mp4">
+        Din webbläsare stöder inte videotaggen.
+    </video>
+
+    <header>
+        <div class="logo">Studieplanerare</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="planera.html">Planera</a></li>
+                <li><a href="fokus.html">Fokusläge</a></li>
+                <li><a href="tips.html">Studietips</a></li>
+                <li><a href="javascript:void(0)" class="menu-icon" onclick="openNav()">☰</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="side-menu" class="side-nav-overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="side-menu-content">
+            <a href="kontakt.html">Om oss</a>
+        </div>
+    </div>
+
+   <main class="tips-main">
+        <div class="hero-text">
+            <h1>Studietips</h1>
+            <p>Hitta motivationen och planera din tid för att lyckas.</p>
+        </div>
+
+        <div class="tips-content">
+            <section class="tips-category">
+                <h2>Motivation</h2>
+                <div class="tips-list">
+                    <div class="tips-card">
+                        <div class="tips-text">
+                            <h3>Hitta ditt "varför"</h3>
+                            <p>Påminn dig själv om varför du studerar. Vad är ditt mål?</p>
+                        </div>
+                        <img src="images/question.png" alt="Mål" class="tips-icon">
+                    </div>
+
+                    <div class="tips-card">
+                        <div class="tips-text">
+                            <h3>Belöna dig själv</h3>
+                            <p>Unna dig något gott eller en rolig paus efter en timmes plugg.</p>
+                        </div>
+                        <img src="images/gift.png" alt="Belöning" class="tips-icon">
+                    </div>
+                </div>
+            </section>
+
+            <section class="tips-category">
+                <h2>Planering</h2>
+                <div class="tips-list">
+                    <div class="tips-card">
+                        <div class="tips-text">
+                            <h3>Pomodoro-tekniken</h3>
+                            <p>Plugga 25 min, vila 5 min. Det hjälper dig att hålla fokus.</p>
+                        </div>
+                        <img src="images/klocka.png" alt="Pomodoro" class="tips-icon">
+                    </div>
+
+                    <div class="tips-card">
+                        <div class="tips-text">
+                            <h3>Prioritera</h3>
+                            <p>Gör det svåraste först. Då slipper du stressen.</p>
+                        </div>
+                        <img src="images/bok.png" alt="Prioritering" class="tips-icon">
+                    </div>
+
+                    <div class="tips-card">
+                        <div class="tips-text">
+                            <h3>Checklistor</h3>
+                            <p>Det är skönt att bocka av saker! Skriv upp allt du ska göra.</p>
+                        </div>
+                        <img src="images/list.png" alt="Checklista" class="tips-icon">
+                    </div>
+                </div>
+            </section>
+
+            <section class="tips-category">
+                <h2>Studiemiljö</h2>
+                <div class="tips-list">
+                    <div class="tips-card">
+                        <div class="tips-text">
+                            <h3>Variation</h3>
+                            <p>Byt miljö ibland. Gå till ett bibliotek, café eller plugga utomhus för att få ny energi.</p>
+                        </div>
+                        <img src="images/study.png" alt="Variation" class="tips-icon">
+                    </div>
+                </div>
+            </section>
+
+            <!-- cafe karta där man kan söka studieplatser -->
+            <section class="tips-category cafe-section">
+
+                <h2>Caféer nära dig</h2>
+                <p>Skriv in din stad för att hitta bra studieplatser:</p>
+
+                <!-- Sökfält där man skriver stad -->
+                <div class="map-search-container">
+                    <input type="text" id="user-address" placeholder="T.ex. Malmö...">
+                    <button onclick="updateMap()" class="add-btn">SÖK</button>
+                </div>
+
+                <!-- Google Maps som visar caféer -->
+                <div class="map-wrapper">
+                    <iframe 
+                        id="cafe-map"
+                        width="100%" 
+                        height="450" 
+                        style="border:0; border-radius: 20px;" 
+                        src="https://maps.google.com/maps?q=cafeer&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
+                </div>
+
+            </section>
+        </div>
+    </main>
+<footer class="gdpr-footer">
+            <p> Adressen du skriver in används endast för att hitta caféer på kartan och sparas inte av oss.</p>
+        </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
